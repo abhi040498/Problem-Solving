@@ -8,22 +8,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
-char** split_string(char*);
-
-// Complete the catAndMouse function below.
-
-// Please either make the string static or allocate on the heap. For example,
-// static char str[] = "hello world";
-// return str;
-//
-// OR
-//
-// char* str = "hello world";
-// return str;
-//
-
-
 int main()
 {
     int x, y, z,t;
