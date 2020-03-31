@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+#include <cstdio>
+
+using namespace std;
+
+
+int main()
+{
+    int x1,x2,v1,v2,jump=0,dist1,dist2;
+    scanf("%d%d%d%d",&x1,&v1,&x2,&v2);
+     while(jump<10000)
+     {
+         dist1=x1+(v1*jump);
+         dist2=x2+(v2*jump);
+         if(dist1==dist2)
+         {
+             printf("YES");
+             break;
+         }
+        jump++;
+     }
+     if(dist1!=dist2)
+     printf("NO");
+     
+
+    return 0;
+}
+
