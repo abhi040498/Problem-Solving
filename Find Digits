@@ -1,50 +1,29 @@
-#include <assert.h>
-#include <limits.h>
-#include <math.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-char* readline();
-char** split_string(char*);
 
-// Complete the catAndMouse function below.
-
-// Please either make the string static or allocate on the heap. For example,
-// static char str[] = "hello world";
-// return str;
-//
-// OR
-//
-// char* str = "hello world";
-// return str;
-//
-
+// Complete the findDigits function below.
 
 int main()
 {
-    int x, y, z,t;
+     int t,n;
+    int count=0,rem;
     scanf("%d",&t);
     while(t--)
     {
-        scanf("%d%d%d",&x,&y,&z);
-
-        if(abs(x-z)<abs(y-z))
+        scanf("%d",&n);
+     int a=n;
+    while(a)
     {
-        printf("Cat A\n");
+            rem=a % 10;
+        if((a % 10 != 0) && (n % rem == 0))
+        {
+            count++;
+        }
+        a/=10;
     }
-    else if(abs(x-z)>abs(y-z))
-    {
-        printf("Cat B\n");
-    }
-    else
-    {
-        printf("Mouse C\n");
-    }
-
+    printf("%d\n", count);
+    count=0;
     }
 
     return 0;
